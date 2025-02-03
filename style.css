@@ -1,0 +1,75 @@
+/* Set the dark background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333; /* Dark background */
+    color: #fff; /* Make the text white for contrast */
+}
+
+/* Styling for the button */
+.cta {
+    position: relative;
+    padding: 30px 60px; /* Increase padding to make the button bigger */
+    font-size: 24px; /* Increase font size for better visibility */
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 70px; /* Increase the size of the background circle */
+    height: 70px; /* Increase the size of the background circle */
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 24px; /* Increase the font size */
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567; /* Keep the text color contrasting for visibility */
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567; /* Make the icon color visible */
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+/* On hover, expand the circle */
+.cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+}
+
+/* On hover, move the arrow icon */
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+/* When the button is clicked, slightly shrink it */
+.cta:active {
+    transform: scale(0.95);
+}
